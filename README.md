@@ -1,4 +1,4 @@
-# rust_util
+# pyu_rust_util
 
 Utility functions for Rust.
 
