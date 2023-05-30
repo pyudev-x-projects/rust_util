@@ -1,5 +1,5 @@
 [package]
-name = "rust_util"
+name = "pyu_rust_util"
 version = "0.1.0"
 edition = "2021"
 description = "Utility functions for Rust."
