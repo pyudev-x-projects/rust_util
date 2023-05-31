@@ -1,8 +1,9 @@
+
 use std::{io, process};
 
 
 pub mod funcs {
-    use std::{io::{self, Write}, process};
+    use std::{io, process};
 
     /// input: creates a String and then calls io::stdin().read_line to read input for the string
     /// 
@@ -35,10 +36,5 @@ pub mod funcs {
         vec.push(n);
 
         return vec;
-    }
-
-    pub fn curl(url:&str) {
-        let output = exec("curl", url);
-        io::stdout().write_all(&output.stdout).unwrap();
     }
 }
