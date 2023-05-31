@@ -7,3 +7,4 @@ license = "MIT"
 authors = ["pyudev-x"]
 
 [dependencies]
+termion = "2.0.1"
