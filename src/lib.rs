@@ -1,6 +1,4 @@
-
 use std::{io::{self, Write}, process};
-
 use termion::color::{self, Red, Blue, Green, Yellow};
 
 /// input: creates a String and then calls io::stdin().read_line to read input for the string.
@@ -63,4 +61,3 @@ pub fn print_color(s: &str, c: &str) {
     }
     
 }
-
