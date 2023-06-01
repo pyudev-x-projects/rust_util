@@ -66,4 +66,6 @@ pub fn change_color(c: &str) {
         "black" => print!("{}", color::Fg(Black)),
         _ => println!("Invalid color.")
     }
+
+    
 }
