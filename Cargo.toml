@@ -1,9 +1,9 @@
 [package]
 name = "pyu_rust_util"
-version = "0.1.64"
+version = "0.1.65"
 edition = "2021"
 description = "Utility functions for Rust."
-license = "MIT"
+license = "GPLv3"
 authors = ["pyudev-x"]
 categories = ["cli", "functions", "util", "simple"]
 keywords = ["cli", "functions", "util", "simple"]
