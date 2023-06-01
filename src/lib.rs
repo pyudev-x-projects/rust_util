@@ -1,4 +1,4 @@
-use std::{io::{self, Write}, process};
+use std::{io::{self, Write}, process::{self, Output}};
 use termion::color;
 use termion::color::*;
 
@@ -66,6 +66,11 @@ pub fn change_color(c: &str) {
         "black" => print!("{}", color::Fg(Black)),
         _ => println!("Invalid color.")
     }
+}
 
-    
+/// output: print out an Output value
+/// 
+/// v: the value to print out
+pub fn output(v: Output) {
+    io::stdout().write_all(&v.stdout).expect("Could not print to stdout");
 }
