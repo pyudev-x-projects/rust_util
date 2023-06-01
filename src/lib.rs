@@ -1,5 +1,6 @@
 use std::{io::{self, Write}, process};
-use termion::color::{self, Red, Blue, Green, Yellow};
+use termion::color;
+use termion::color::*;
 
 /// input: creates a String and then calls io::stdin().read_line to read input for the string.
 /// 
@@ -15,6 +16,7 @@ pub fn input(s: &str)-> String {
 /// exec: creates a Command with the cmd and arg parameters and returns the output.
 /// 
 /// cmd: The command to run.
+/// 
 /// arg: The command argument.
 pub fn exec(cmd: &str, arg: &str) -> process::Output {
     let output = process::Command::new(cmd).arg(arg).output().expect("Could not run system command");
@@ -45,19 +47,23 @@ pub fn curl(url:&str) {
 }
 
 
-/// print_color: print text but with color
+/// change_color: change the console text color
 /// 
-/// s: The string to print out.
-/// c: The color, either: ["red", "blue", "green", or "yellow"]
-pub fn print_color(s: &str, c: &str) {
+/// c: The color
+/// 
+/// List of colors: ["red", "blue", "green", "yellow", "magenta", "cyan", "white", "black"]
+pub fn change_color(c: &str) {
     let  col = String::from(c);
     
     match col.to_lowercase().trim() {
-        "red" => println!("{}{}", color::Fg(Red), s),
-        "blue" => println!("{}{}", color::Fg(Blue), s),
-        "green" => println!("{}{}", color::Fg(Green), s),
-        "yellow" => println!("{}{}", color::Fg(Yellow), s),
+        "red" => print!("{}", color::Fg(Red)),
+        "blue" => print!("{}", color::Fg(Blue)), 
+        "green" => print!("{}", color::Fg(Green)),
+        "yellow" => print!("{}", color::Fg(Yellow)),
+        "magenta" => print!("{}", color::Fg(Magenta)),
+        "cyan" => print!("{}", color::Fg(Cyan)), 
+        "white" => print!("{}", color::Fg(White)),
+        "black" => print!("{}", color::Fg(Black)),
         _ => println!("Invalid color.")
     }
-    
 }
