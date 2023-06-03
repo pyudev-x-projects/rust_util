@@ -74,3 +74,27 @@ pub fn change_color(c: &str) {
 pub fn output(v: Output) {
     io::stdout().write_all(&v.stdout).expect("Could not print to stdout");
 }
+
+/// rainbow_hello: pointless function for a rainbow hello world
+pub fn rainbow_hello() {
+    change_color("red");
+    print!("H");
+    change_color("yellow");
+    print!("e");
+    change_color("green");
+    print!("l");
+    change_color("blue");
+    print!("l");
+    change_color("magenta");
+    print!("o, ");
+    change_color("red");
+    print!("w");
+    change_color("yellow");
+    print!("o");
+    change_color("green");
+    print!("r");
+    change_color("blue");
+    print!("l");
+    change_color("magenta");
+    print!("d!");
+}
