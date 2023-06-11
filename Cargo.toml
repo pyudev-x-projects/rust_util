@@ -1,6 +1,6 @@
 [package]
 name = "pyu_rust_util"
-version = "0.1.70"
+version = "0.1.71"
 edition = "2021"
 description = "Utility functions for Rust."
 license = "GPL-3.0"
@@ -9,4 +9,5 @@ categories = ["cli", "functions", "util", "simple"]
 keywords = ["cli", "functions", "util", "simple"]
 
 [dependencies]
+rodio = "0.17.1"
 termion = "2.0.1"
