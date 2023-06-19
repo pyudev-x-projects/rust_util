@@ -1,6 +1,6 @@
 [package]
 name = "pyu_rust_util"
-version = "0.1.71"
+version = "0.1.80"
 edition = "2021"
 description = "Utility functions for Rust."
 license = "GPL-3.0"
